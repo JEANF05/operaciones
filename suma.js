@@ -1,22 +1,29 @@
+function operaciones() {
+   
+    var numero1 = parseFloat(document.getElementById("numero1").value);
+    var numero2 = parseFloat(document.getElementById("numero2").value);
+    var operacion = document.getElementById("operacion").value;
 
-function sumar() {
-    
-    
-    var numero1 = document.getElementById("numero1").value;
-    var numero2 = document.getElementById("numero2").value;
+    var resultado;
 
-    
-    
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
-
-    if (isNaN(numero1) || isNaN(numero2)) {
-        document.getElementById("resultado").textContent = "Por favor, ingresa números válidos.";
-    } else {
-         
-        var suma = numero1 + numero2;
-
-       
-        document.getElementById("resultado").textContent = "La suma de " + numero1 + " y " + numero2 + " es igual a: " + suma;
+   
+    switch (operacion) {
+        case "suma":
+            resultado = numero1 + numero2;
+            break;
+        case "resta":
+            resultado = numero1 - numero2;
+            break;
+        case "multiplicación":
+            resultado = numero1 * numero2;
+            break;
+        case "división":
+            resultado = numero1 / numero2;
+            break;
+        default:
+            resultado = "Operación no válida";
     }
+
+   
+    document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
 }
