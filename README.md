@@ -1,3 +1,1 @@
-#Mi Primer Proyecto git 
-#Autor: Diego Pinilla 
-#Autor: jf 
+# Operaciones matem ticas 
